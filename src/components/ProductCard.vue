@@ -5,7 +5,7 @@
     </div>
     <img :src="getImage(product.image)" :alt="product.name">
     <div class="infoProduct">
-    <div class="infoHeader">
+    <div class="infoContent">
         <h3>{{ product.name }}</h3>
         <div class="priceBox">
           <p v-if="product.offer" class="oldPrice">{{ product.oldPrice }} €</p>
@@ -42,9 +42,12 @@ export default {
 <style scoped>
 .card{
     position: relative;
-    border: 1px solid black; 
+    border: 1px solid rgba(0, 0, 0, 0.235); 
+    border-radius: 20px;
     margin: 0.2vh 0.2vw;
     width: 300px;
+    display: flex;
+    flex-direction: column; /* ← MUY IMPORTANTE */
 }
 .card:hover{
     cursor: pointer;
@@ -53,10 +56,16 @@ export default {
     width: 300px;
     height: 300px;
     object-fit: cover;
-    margin-bottom: 1vh
+    margin-bottom: 1vh;
+    border-radius: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.235); 
 }
 .infoProduct {
   padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* separa info arriba y botón abajo */
 }
 
 .infoProduct h3,
@@ -64,7 +73,7 @@ export default {
   max-width: 150px;
 }
 
-.infoHeader {
+.infoContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
