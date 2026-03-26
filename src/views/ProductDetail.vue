@@ -2,12 +2,7 @@
   <div class="contenidos-principales">
   <div class="productDetail">
 
-    <button class="backButton" @click.stop="$router.go(-1)">
-      <svg width="16" height="16" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M15 18l-6-6 6-6"/>
-      </svg>
-      Comeback Shop
-    </button>
+    <ComeBackBtn />
 
     <div v-if="product" class="detailContainer">
 
@@ -42,6 +37,7 @@
 
 <script>
 import products from "@/jsonPruebas/products.json";
+import ComeBackBtn from "@/components/ComeBackBtn.vue";
 
 export default {
   name: "ProductDetail",
@@ -50,6 +46,9 @@ export default {
     product() {
       return products.find(p => p.id == this.id);
     }
+  },
+  components:{
+    ComeBackBtn
   }
 }
 </script>
