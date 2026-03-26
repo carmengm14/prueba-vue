@@ -3,7 +3,9 @@
   --color-primario: #333;
   --color-secundario: #555;
   --color-texto: #222;
+  --color-blanco: #fff;
   --color-fondo: #f5f5f5;
+  --color-oferta: red;
 }
 body {
   margin: 0;
@@ -12,6 +14,12 @@ body {
 
 .contenido-web{
   margin: 5vh 20vw;
+  flex: 1;
+}
+#app{
+  min-height: 100vh;       /* ocupa toda la pantalla */
+  display: flex;           /* usamos flexbox */
+  flex-direction: column;  /* elementos en columna */
 }
 
 /* Estilo general de títulos */
@@ -45,4 +53,55 @@ p {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 1200px;
+}
+.buttonPrincipal{
+    background-color: transparent;
+    color: var(--color-texto);
+    border: 1px solid black;
+    padding: 0.5vh 3vw;
+    margin: 5px 0;
+    display:flex; align-items: center; justify-content:center
+}
+.buttonPrincipal:hover{
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+    cursor: pointer;
+}
+.backButton{
+     display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: black;
+    margin: 2vh 0;
+    text-decoration: underline;
+    border: none
+}
+.backButton:hover{
+    cursor: pointer;
+}
+
+/*Shop Prices*/
+.oldPrice{
+  text-decoration: line-through;
+  color: #888;
+  font-size: 15px !important;
+  margin: 0
+}
+
+.offerTag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color-oferta);
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 10;
+}
+.offerPrice {
+  color: var(--color-oferta);
+  font-weight: bold
 }
