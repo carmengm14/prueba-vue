@@ -20,14 +20,14 @@
     <!-- Columna 3: Texto -->
     <div class="footer-col" style="text-align: justify;">
       <p>
-        Un pequeño proyecto que marca el inicio de un camino lleno de ideas, retos y mucho aprendizaje.
+        A small project that marks the start of a journey full of ideas, challenges and plenty of learning.
       </p>
     </div>
 
     <!-- Columna 4: Contacto -->
     <div class="footer-col" style="text-align: justify;">
-      <p><span class="icon">📸</span> @usuario</p>
-      <p><span class="icon">✉️</span> usuario@email.com</p>
+      <p><span class="icon">📸</span> @user</p>
+      <p><span class="icon">✉️</span> user@email.com</p>
       <p><span class="icon">📞</span> +34 000 000 000</p>
     </div>
 
@@ -35,7 +35,7 @@
 
   <!-- Columna 5: Copyright -->
   <div class="footer-copy">
-    Mi Web de pruebas © Carmen García 2026
+    My test website © Carmen García 2026
   </div>
 </footer>
 
