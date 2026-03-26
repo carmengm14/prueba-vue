@@ -13,9 +13,12 @@ body {
 }
 
 .contenido-web{
-  margin: 5vh 20vw;
   flex: 1;
 }
+.contenidos-principales{
+  margin: 5vh 20vw;
+}
+
 #app{
   min-height: 100vh;       /* ocupa toda la pantalla */
   display: flex;           /* usamos flexbox */
@@ -46,6 +49,7 @@ h3 {
 p {
   line-height: 1.6;
   color: var(--color-texto);
+  text-align: justify;
 }
 
 /* Clases reutilizables */
@@ -67,6 +71,22 @@ p {
     color: var(--color-blanco);
     cursor: pointer;
 }
+.buttonTransparenteBlanco{
+    background-color: transparent;
+    color: var(--color-blanco);
+    border: 1px solid white;
+    padding: 0.5vh 3vw;
+    margin: 5px 0;
+    width: fit-content;
+    display:flex; 
+    align-items: center; 
+    justify-content:center;
+}
+.buttonTransparenteBlanco:hover{
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    cursor: pointer;
+}
 .backButton{
      display: flex;
     align-items: center;
@@ -75,7 +95,7 @@ p {
     color: black;
     margin: 2vh 0;
     text-decoration: underline;
-    border: none
+    border: none;
 }
 .backButton:hover{
     cursor: pointer;

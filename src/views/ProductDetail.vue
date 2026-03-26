@@ -1,4 +1,5 @@
 <template>
+  <div class="contenidos-principales">
   <div class="productDetail">
 
     <button class="backButton" @click.stop="$router.go(-1)">
@@ -30,14 +31,12 @@
             </svg> Add to cart
         </button>
       </div>
-
-      
-
     </div>
 
     <p v-else>Producto no encontrado</p>
 
   </div>
+</div>
 </template>
 
 
