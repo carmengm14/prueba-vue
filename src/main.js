@@ -6,6 +6,11 @@ import "./styles/styles.css"
 
 Vue.config.productionTip = false;
 
+Vue.prototype.$inBuildingProccess = function () {
+  alert("We are sorry this functionality doesn't work right now, we are working on it to be better, thanks.");
+};
+
+
 new Vue({
   router,
   render: h => h(App)

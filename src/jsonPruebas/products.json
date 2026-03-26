@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Vue T-shirt",
+    "price": 19.99,
+    "image": "camiseta-vue.jpg",
+    "shortDescription": "Green crew-neck T-shirt",
+    "offer": true,
+    "oldPrice": 29.99
+  },
+  {
+    "id": 2,
+    "name": "Vue Mug",
+    "price": 9.99,
+    "image": "taza-vue.jpg",
+    "shortDescription": "White ceramic Vue logo mug",
+    "offer": false,
+    "oldPrice": null
+  },
+  {
+    "id": 3,
+    "name": "Vue Hoddie",
+    "price": 29.99,
+    "image": "sudadera-vue.jpg",
+    "shortDescription": "White hooded sweatshirt with the Vue logo",
+    "offer": true,
+    "oldPrice": 23.99
+  },
+  {
+    "id": 4,
+    "name": "Vue Black Sweatshirt",
+    "price": 29.99,
+    "image": "sudadera-negra-vue.jpg",
+    "shortDescription": "Black hooded sweatshirt with logo",
+    "offer": false,
+    "oldPrice": null
+  },
+  {
+    "id": 5,
+    "name": "Black Vue 2 Sweatshirt",
+    "price": 29.99,
+    "image": "sudadera-negra-vue.jpg",
+    "shortDescription": "Black hooded sweatshirt with the Vue logo",
+    "offer": false,
+    "oldPrice": null
+  },
+  {
+    "id": 6,
+    "name": "Vue 2 Hoodie",
+    "price": 29.99,
+    "image": "sudadera-vue.jpg",
+    "shortDescription": "White Vue logo hooded sweatshirt",
+    "offer": false,
+    "oldPrice": null
+  },
+  {
+    "id": 7,
+    "name": "Vue 2 Mug",
+    "price": 9.99,
+    "image": "taza-vue.jpg",
+    "shortDescription": "White ceramic Vue logo mug",
+    "offer": false,
+    "oldPrice": null
+  },
+  {
+    "id": 8,
+    "name": "T-shirt View 2",
+    "price": 19.99,
+    "image": "camiseta-vue.jpg",
+    "shortDescription": "Green crew-neck T-shirt",
+    "offer": false,
+    "oldPrice": null
+  }
+]
