@@ -9,12 +9,30 @@
     />
     <div class="contenidos-principales">
       <div class="content">
-        <OrderByShopComponent @order="selectedOrder = $event" />
-        <SearchBar @search="searchQuery = $event" />
+        <OrderByShopComponent
+          @order="
+            selectedOrder = $event;
+            itemsToShow = 8;
+          "
+        />
+
+        <SearchBar
+          @search="
+            searchQuery = $event;
+            itemsToShow = 8;
+          "
+        />
       </div>
       <div class="products">
         <ProductCard v-for="item in filteredProducts" :key="item.id" :product="item" />
       </div>
+      <button
+        v-if="itemsToShow < products.length"
+        @click="itemsToShow += 8"
+        class="loadMoreBtn"
+      >
+        Ver más...
+      </button>
     </div>
   </div>
 </template>
@@ -39,11 +57,12 @@ export default {
       products,
       searchQuery: "",
       selectedOrder: "",
+      itemsToShow: 8,
     };
   },
   computed: {
-    filteredProducts() {
-      // 1. Filtrar por búsqueda
+    // Todos los productos filtrados + ordenados (sin límite)
+    processedProducts() {
       let result = this.products.filter((item) => {
         const query = this.searchQuery.toLowerCase();
 
@@ -52,33 +71,30 @@ export default {
         );
       });
 
-      // 2. Ordenar según el filtro seleccionado
       switch (this.selectedOrder) {
         case "offer":
           result = result.filter((item) => item.offer === true);
           break;
-
         case "price-asc":
           result.sort((a, b) => a.price - b.price);
           break;
-
         case "price-desc":
           result.sort((a, b) => b.price - a.price);
           break;
-
         case "az":
           result.sort((a, b) => a.name.localeCompare(b.name));
           break;
-
         case "za":
           result.sort((a, b) => b.name.localeCompare(a.name));
-          break;
-
-        default:
           break;
       }
 
       return result;
+    },
+
+    // Solo los que se muestran en la vista
+    filteredProducts() {
+      return this.processedProducts.slice(0, this.itemsToShow);
     },
   },
 };
@@ -97,5 +113,20 @@ export default {
   justify-content: flex-end;
   align-items: center;
   gap: 1rem;
+}
+.loadMoreBtn {
+  margin: 30px auto;
+  display: block;
+  padding: 12px 30px;
+  border: 1px solid #000;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.loadMoreBtn:hover {
+  background: #000;
+  color: #fff;
 }
 </style>
