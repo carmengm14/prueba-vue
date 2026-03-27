@@ -129,4 +129,21 @@ export default {
   background: #000;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* uno debajo del otro */
+    align-items: stretch; /* que ocupen todo el ancho */
+    gap: 10px; /* separación más pequeña */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .content > * {
+    width: 100%; /* cada filtro ocupa todo el ancho */
+  }
+
+  .products {
+    margin-top: 2vh;
+  }
+}
 </style>

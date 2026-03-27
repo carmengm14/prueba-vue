@@ -6,6 +6,7 @@ import AboutView from "@/views/AboutView.vue";
 import ContactView from "@/views/ContactView.vue";
 import ShopView from "@/views/ShopView.vue";
 import ProductDetail from "@/views/ProductDetail.vue";
+import ShoppingCartView from "@/views/ShoppingCartView.vue";
 
 Vue.use(VueRouter);
 
@@ -35,7 +36,13 @@ const routes = [
   name: 'ProductDetail',
   component: ProductDetail,
   props: true
-}
+  },
+  {
+    path: '/shoppingCart',
+    name: 'ShoppingCartView',
+    component: ShoppingCartView,
+    props: true
+  }
 ];
 
 const router = new VueRouter({
