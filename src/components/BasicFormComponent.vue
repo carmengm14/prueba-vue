@@ -12,7 +12,7 @@
             <input type="text" v-model="form.name" />
             <p v-if="errors.name" class="error">{{ errors.name }}</p>
           </div>
-
+          ∫
           <!-- Email -->
           <div class="formGroup">
             <label>Email</label>
@@ -129,18 +129,6 @@ textarea {
   padding: 10px;
   border: 1px solid #aaa;
   border-radius: 6px;
-}
-
-.error {
-  color: red;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.success {
-  color: green;
-  font-size: 16px;
-  margin-top: 15px;
 }
 @media (max-width: 900px) {
   .imgBox,
