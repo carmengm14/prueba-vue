@@ -8,8 +8,10 @@
       :bgImage="require('@/assets/foto-shop.jpg')"
     />
     <div class="contenidos-principales">
-      <OrderByShopComponent @order="selectedOrder = $event" />
-      <SearchBar @search="searchQuery = $event" />
+      <div class="content">
+        <OrderByShopComponent @order="selectedOrder = $event" />
+        <SearchBar @search="searchQuery = $event" />
+      </div>
       <div class="products">
         <ProductCard v-for="item in filteredProducts" :key="item.id" :product="item" />
       </div>
@@ -88,6 +90,12 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
+  gap: 1rem;
+}
+.content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 1rem;
 }
 </style>

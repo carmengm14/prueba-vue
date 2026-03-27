@@ -26,8 +26,9 @@ export default {
 
 <style scoped>
 .orderSelect {
+  width: auto;
   border: 1px solid #000;
-  padding: 12px 40px 12px 12px;
+  padding: 12px 10px 12px 12px;
   background: transparent;
   font-size: 14px;
   outline: none;

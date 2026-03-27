@@ -22,14 +22,9 @@ export default {
 </script>
 
 <style scoped>
-.content {
-  display: flex;
-  justify-content: flex-end; /* empuja el buscador a la derecha */
-  width: 100%;
-}
 .searchInput {
-  width: 25%;
-  padding: 12px 40px 12px 12px; /* espacio para la lupa */
+  width: auto;
+  padding: 12px 100px 12px 12px; /* espacio para la lupa */
   border: 1px solid #000;
   background: transparent;
   font-size: 14px;
