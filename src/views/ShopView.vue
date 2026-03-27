@@ -8,7 +8,7 @@
       :bgImage="require('@/assets/foto-shop.jpg')"
     />
     <div class="contenidos-principales">
-      <FilterShopComponent @order="selectedOrder = $event" />
+      <OrderByShopComponent @order="selectedOrder = $event" />
       <SearchBar @search="searchQuery = $event" />
       <div class="products">
         <ProductCard v-for="item in filteredProducts" :key="item.id" :product="item" />
@@ -22,7 +22,7 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import products from "@/jsonPruebas/products.json";
 import SearchBar from "@/components/SearchBar.vue";
-import FilterShopComponent from "@/components/FilterShopComponent.vue";
+import OrderByShopComponent from "@/components/OrderByShopComponent.vue";
 
 export default {
   name: "ShopView",
@@ -30,7 +30,7 @@ export default {
     ProductCard,
     HeaderComponent,
     SearchBar,
-    FilterShopComponent,
+    OrderByShopComponent,
   },
   data() {
     return {

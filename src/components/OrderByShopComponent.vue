@@ -4,7 +4,7 @@
     @change="$emit('order', selectedOrder)"
     class="orderSelect"
   >
-    <option value="">Default</option>
+    <option value="">Order by</option>
     <option value="offer">Offerts</option>
     <option value="price-asc">Cheapest first</option>
     <option value="price-desc">Most expensive first</option>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "FilterShopComponent",
+  name: "OrderByShopComponent",
   data() {
     return {
       selectedOrder: "",
