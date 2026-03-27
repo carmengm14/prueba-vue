@@ -101,6 +101,19 @@ p {
     cursor: pointer;
 }
 
+/* MENSAJES DE ERROR */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.success {
+  color: green;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
 /*Shop Prices*/
 .oldPrice{
   text-decoration: line-through;
