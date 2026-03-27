@@ -12,7 +12,6 @@
             <input type="text" v-model="form.name" />
             <p v-if="errors.name" class="error">{{ errors.name }}</p>
           </div>
-          ∫
           <!-- Email -->
           <div class="formGroup">
             <label>Email</label>
