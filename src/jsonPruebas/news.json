@@ -1,0 +1,19 @@
+[{
+    "id": 1,
+    "newsTitle": "New computer with 128gb of ram on sale!",
+    "category": "Tecnology",
+    "image": "thumbsNews/newComputer.jpeg",
+    "Description": "Is crazy how the tecnology is going on these days, a few year ago was imposible to think about a computer like we do now...",
+    "comments": 3,
+    "data": "2026 Jan 21"
+},
+{
+    "id": 2,
+    "newsTitle": "New updates on Photoshop 2026",
+    "category": "Desing",
+    "image": "thumbsNews/photoshopUpdates.avif",
+    "Description": "Photoshop add new features to the lats update of 2026, adding Firefly AI to our designs, Photoshop is making our work easier or just trying to remove us from the design?",
+    "comments": 5,
+    "data": "2026 Jan 22"
+  }
+]
