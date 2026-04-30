@@ -1,8 +1,8 @@
 <template>
   <div class="card">
     <div class="photo">
-      <img :src="require(`../assets/${news.image}`)" alt="" />
-      <p class="category"><span></span>{{ news.category }}</p>
+      <img :src="require('../assets/' + news.image)" alt="" />
+      <p class="category" :class="categoryClass"><span></span>{{ news.category }}</p>
     </div>
     <div class="info">
       <p class="newsTitle">{{ news.newsTitle }}</p>
@@ -33,16 +33,47 @@ export default {
       if (text.length <= 100) return text;
       return text.slice(0, 100).split(" ").slice(0, -1).join(" ") + "...";
     },
+    categoryClass() {
+      if (!this.news) return "";
+      return (this.news.category || "").toLowerCase().trim().replace(/\s+/g, "");
+    },
   },
 };
 </script>
 
 <style scoped>
+.category.technology {
+  border: 1px solid rgb(216, 109, 187);
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.853);
+  color: rgb(216, 109, 187);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.325);
+}
+
+.category.design {
+  border: 1px solid rgb(109, 209, 216);
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.853);
+  color: rgb(109, 209, 216);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.325);
+}
+.category.technology span {
+  background-color: rgb(216, 109, 187);
+  box-shadow: 0 0 6px rgba(216, 109, 187, 0.325);
+}
+.category.design span {
+  background-color: rgb(0, 174, 255);
+  box-shadow: 0 0 6px rgb(0, 123, 255);
+}
+
 .card {
   width: 350px;
   margin: 20px 20px;
   border: 1px gainsboro solid;
   border-radius: 12px;
+}
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.048);
 }
 .photo {
   position: relative;
@@ -57,12 +88,8 @@ export default {
   position: absolute;
   top: 5px;
   left: 10px;
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.325);
   border-radius: 20px;
-  border: 1px solid white;
   padding: 5px 10px;
-  color: white;
   font-size: 12px;
 }
 .category span {
@@ -90,17 +117,23 @@ export default {
   font-weight: bold;
   font-size: 20px;
   text-align: left;
+  line-height: 22px;
 }
 .data {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  margin-top: 10px;
   align-items: center;
 }
 .icon {
   width: 15px;
   height: 15px;
 }
+.descriptionNews {
+  line-height: 22px;
+}
+
 @keyframes blink {
   0% {
     opacity: 1;

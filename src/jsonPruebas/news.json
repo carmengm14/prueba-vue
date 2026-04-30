@@ -1,7 +1,7 @@
 [{
     "id": 1,
     "newsTitle": "New computer with 128gb of ram on sale!",
-    "category": "Tecnology",
+    "category": "Technology",
     "image": "thumbsNews/newComputer.jpeg",
     "Description": "Is crazy how the tecnology is going on these days, a few year ago was imposible to think about a computer like we do now...",
     "comments": 3,
@@ -10,10 +10,28 @@
 {
     "id": 2,
     "newsTitle": "New updates on Photoshop 2026",
-    "category": "Desing",
+    "category": "Design",
     "image": "thumbsNews/photoshopUpdates.avif",
     "Description": "Photoshop add new features to the lats update of 2026, adding Firefly AI to our designs, Photoshop is making our work easier or just trying to remove us from the design?",
     "comments": 5,
-    "data": "2026 Jan 22"
+    "data": "2026 Jan 19"
+  },
+  {
+    "id": 3,
+    "newsTitle": "Trending fonts of 2026",
+    "category": "Design",
+    "image": "thumbsNews/tipografiasBlog.gif",
+    "Description": "Every time we design something one of the most important parts of it, is the font that we choose, we are not just choosing a font, we are choosing what we want to transmit, what we want to be, so is an important thing",
+    "comments": 7,
+    "data": "2026 Jan 18"
+  },
+  {
+    "id": 4,
+    "newsTitle": "New Android Smartphones with a tablet size",
+    "category": "Technology",
+    "image": "thumbsNews/movilNews.webp",
+    "Description": "Photoshop add new features to the lats update of 2026, adding Firefly AI to our designs, Photoshop is making our work easier or just trying to remove us from the design?",
+    "comments": 4,
+    "data": "2026 Jan 16"
   }
 ]
