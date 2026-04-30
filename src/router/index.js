@@ -7,6 +7,7 @@ import ContactView from "@/views/ContactView.vue";
 import ShopView from "@/views/ShopView.vue";
 import ProductDetail from "@/views/ProductDetail.vue";
 import ShoppingCartView from "@/views/ShoppingCartView.vue";
+import BlogNewsDetail from "@/views/BlogNewsDetail.vue";
 
 Vue.use(VueRouter);
 
@@ -42,7 +43,12 @@ const routes = [
     name: 'ShoppingCartView',
     component: ShoppingCartView,
     props: true
-  }
+  },
+  {
+      path: "/news/:id",
+      name: "news-detail",
+      component: BlogNewsDetail,
+    },
 ];
 
 const router = new VueRouter({

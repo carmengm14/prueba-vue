@@ -8,15 +8,55 @@
       <p class="newsTitle">{{ news.newsTitle }}</p>
       <div class="metaInfo">
         <div class="data">
-          <img src="../assets/iconoReloj.png" alt="" class="icon" />
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="rgb(175,175,175)"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M12 7v5l3 3"></path>
+          </svg>
           <span class="dataText">{{ news.data }}</span>
         </div>
         <div class="data">
-          <img src="../assets/comentario.png" alt="" class="icon" />
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="rgb(175,175,175)"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"
+            ></path>
+          </svg>
           <span class="commentsNumber">{{ news.comments }}</span>
         </div>
       </div>
       <p class="descriptionNews">{{ shortDescription }}</p>
+      <button class="btn-more" @click="goToNews">
+        <span>Saber más</span>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M9 6l6 6-6 6"></path>
+        </svg>
+      </button>
     </div>
   </div>
 </template>
@@ -38,34 +78,15 @@ export default {
       return (this.news.category || "").toLowerCase().trim().replace(/\s+/g, "");
     },
   },
+  methods: {
+    goToNews() {
+      this.$router.push(`/news/${this.news.id}`);
+    },
+  },
 };
 </script>
 
 <style scoped>
-.category.technology {
-  border: 1px solid rgb(216, 109, 187);
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.853);
-  color: rgb(216, 109, 187);
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.325);
-}
-
-.category.design {
-  border: 1px solid rgb(109, 209, 216);
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.853);
-  color: rgb(109, 209, 216);
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.325);
-}
-.category.technology span {
-  background-color: rgb(216, 109, 187);
-  box-shadow: 0 0 6px rgba(216, 109, 187, 0.325);
-}
-.category.design span {
-  background-color: rgb(0, 174, 255);
-  box-shadow: 0 0 6px rgb(0, 123, 255);
-}
-
 .card {
   width: 350px;
   margin: 20px 20px;
@@ -83,23 +104,6 @@ export default {
   height: 200px;
   object-fit: cover;
   border-radius: 12px 12px 0px 0px;
-}
-.category {
-  position: absolute;
-  top: 5px;
-  left: 10px;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 12px;
-}
-.category span {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: white; /* color del punto */
-  border-radius: 50%;
-  margin-right: 6px;
-  animation: blink 1.2s infinite;
 }
 .info {
   padding: 2px 15px 15px 15px;
@@ -134,18 +138,30 @@ export default {
   line-height: 22px;
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.3;
-    transform: scale(1.4);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+.btn-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
 }
+
+.btn-more:hover {
+  cursor: pointer;
+}
+
+.btn-more svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-more:hover svg {
+  transform: translateX(6px);
+}
+
 </style>

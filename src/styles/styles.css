@@ -138,3 +138,60 @@ p {
   color: var(--color-oferta);
   font-weight: bold
 }
+
+/*Etiquetas categorias blog*/
+.category.technology {
+  border: 1px solid rgb(216, 109, 187);
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.853);
+  color: rgb(216, 109, 187);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.325);
+}
+
+.category.design {
+  border: 1px solid rgb(109, 209, 216);
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.853);
+  color: rgb(109, 209, 216);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.325);
+}
+.category.technology span {
+  background-color: rgb(216, 109, 187);
+  box-shadow: 0 0 6px rgba(216, 109, 187, 0.325);
+}
+.category.design span {
+  background-color: rgb(0, 174, 255);
+  box-shadow: 0 0 6px rgb(0, 123, 255);
+}
+.category {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.category span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: white; /* color del punto */
+  border-radius: 50%;
+  margin-right: 6px;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
