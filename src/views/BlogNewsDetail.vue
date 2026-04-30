@@ -227,7 +227,7 @@ export default {
 .comments-section {
   width: 100%;
   margin: 60px auto;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--color-primario);
   padding-top: 40px;
 }
 
@@ -301,8 +301,8 @@ export default {
 .add-comment button {
   padding: 10px;
   border: none;
-  background: black;
-  color: white;
+  background: var(--color-primario);
+  color: var(--color-blanco);
   cursor: pointer;
   border-radius: 6px;
 }

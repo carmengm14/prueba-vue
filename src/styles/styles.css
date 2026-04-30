@@ -1,6 +1,6 @@
 /* Colores globales */
 :root {
-  --color-primario: #333;
+  --color-primario: black;
   --color-secundario: #555;
   --color-texto: #222;
   --color-blanco: #fff;
@@ -61,7 +61,7 @@ p {
 .buttonPrincipal{
     background-color: transparent;
     color: var(--color-texto);
-    border: 1px solid black;
+    border: 1px solid var(--color-primario);
     padding: 0.5vh 3vw;
     margin: 5px 0;
     display:flex; align-items: center; justify-content:center
@@ -74,7 +74,7 @@ p {
 .buttonTransparenteBlanco{
     background-color: transparent;
     color: var(--color-blanco);
-    border: 1px solid white;
+    border: 1px solid var(--color-blanco);
     padding: 0.5vh 3vw;
     margin: 5px 0;
     width: fit-content;
@@ -87,18 +87,32 @@ p {
     color: var(--color-texto);
     cursor: pointer;
 }
-.backButton{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: transparent;
-    color: black;
-    margin: 2vh 0;
-    text-decoration: underline;
-    border: none;
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  transition: 0.3s;
+  margin-bottom: 1vh;
 }
-.backButton:hover{
-    cursor: pointer;
+
+.backButton:hover {
+  cursor: pointer;
+}
+
+.backButton svg {
+  transition: transform 0.2s ease;
+}
+
+.backButton:hover svg {
+  transform: translateX(-6px);
 }
 
 /* MENSAJES DE ERROR */
@@ -127,7 +141,7 @@ p {
   top: 10px;
   right: 10px;
   background-color: var(--color-oferta);
-  color: white;
+  color: var(--color-blanco);
   padding: 5px 10px;
   font-weight: bold;
   border-radius: 4px;
@@ -175,7 +189,7 @@ p {
   display: inline-block;
   width: 8px;
   height: 8px;
-  background-color: white; /* color del punto */
+  background-color: var(--color-blanco); /* color del punto */
   border-radius: 50%;
   margin-right: 6px;
   animation: blink 1.2s infinite;

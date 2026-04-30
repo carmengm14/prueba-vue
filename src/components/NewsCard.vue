@@ -142,13 +142,12 @@ export default {
   display: flex;
   align-items: center;
   gap: 6px;
-
   padding: 8px 12px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: black;
-  color: white;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
   transition: 0.3s;
 }
 
