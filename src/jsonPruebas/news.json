@@ -68,6 +68,22 @@
         "score": 3,
         "comment": "Good update but still needs improvement in precision",
         "commentDate": "2026 Jan 19"
+      },
+      {
+        "id": 4,
+        "User": "Menxu",
+        "UserMail": "menxu.g@gmail.com",
+        "score": 4,
+        "comment": "Love it",
+        "commentDate": "2026 Jan 19"
+      },
+      {
+        "id": 5,
+        "User": "Hater 392839",
+        "UserMail": "fvckpolice@gmail.com",
+        "score": 1,
+        "comment": "What a shit",
+        "commentDate": "2026 Jan 19"
       }
     ]
   },
@@ -104,6 +120,38 @@
         "score": 3,
         "comment": "Good trends, but I still prefer classic fonts",
         "commentDate": "2026 Jan 17"
+      },
+      {
+        "id": 4,
+        "User": "Laura Sánchez",
+        "UserMail": "laura.s@gmail.com",
+        "score": 3,
+        "comment": "Good update",
+        "commentDate": "2026 Jan 17"
+      },
+      {
+        "id": 5,
+        "User": "Fran",
+        "UserMail": "laura.s@gmail.com",
+        "score": 5,
+        "comment": "Amazing",
+        "commentDate": "2026 Jan 17"
+      },
+      {
+        "id": 6,
+        "User": "Brandz company",
+        "UserMail": "brandsco@gmail.com",
+        "score": 5,
+        "comment": "Love it",
+        "commentDate": "2026 Jan 17"
+      },
+      {
+        "id": 7,
+        "User": "Paco Soria",
+        "UserMail": "pacopaquete@gmail.com",
+        "score": 3,
+        "comment": "Photoshop sigue siendo una herramienta increíblemente potente para diseño y edición, especialmente con las nuevas funciones de IA que agilizan mucho el trabajo. Sin embargo, cada vez depende más de la automatización, lo que puede restar control a los diseñadores más detallistas. Aun así, bien usado, sigue siendo un estándar imprescindible en la industria creativa.",
+        "commentDate": "2026 Jan 19"
       }
     ]
   },
@@ -131,6 +179,22 @@
         "UserMail": "sofia.lopez@gmail.com",
         "score": 5,
         "comment": "I love the idea of replacing tablet and phone in one device",
+        "commentDate": "2026 Jan 16"
+      },
+      {
+        "id": 3,
+        "User": "Paula López",
+        "UserMail": "paula.lopez@gmail.com",
+        "score": 5,
+        "comment": "I love the idea of one device",
+        "commentDate": "2026 Jan 16"
+      },
+      {
+        "id": 4,
+        "User": "Fernando Tejero",
+        "UserMail": "fertejegorros@gmail.com",
+        "score": 5,
+        "comment": "I feel like i'm in the future",
         "commentDate": "2026 Jan 16"
       }
     ]

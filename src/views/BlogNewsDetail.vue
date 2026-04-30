@@ -46,7 +46,7 @@
         <p class="blogContent" v-if="news">{{ news.content }}</p>
         <div class="comments-section" v-if="news && news.commentsData">
           <h2>Comments</h2>
-          <div class="comment" v-for="comment in news.commentsData" :key="comment.id">
+          <div class="comment" v-for="comment in visibleComments" :key="comment.id">
             <div class="comment-header">
               <p class="user">{{ comment.User }}</p>
               <div class="infoDateComment">
@@ -74,6 +74,11 @@
             </div>
 
             <p class="text">{{ comment.comment }}</p>
+          </div>
+          <div v-if="news && news.commentsData.length > 4" class="load-more">
+            <button @click="showAllComments = !showAllComments" class="buttonPrincipal">
+              {{ showAllComments ? "Show less" : "Read more comments" }}
+            </button>
           </div>
         </div>
         <div class="leaveYourCommentSection">
@@ -123,6 +128,7 @@ export default {
         text: "",
         score: 0,
       },
+      showAllComments: false,
     };
   },
 
@@ -144,6 +150,13 @@ export default {
     categoryClass() {
       if (!this.news) return "";
       return (this.news.category || "").toLowerCase().trim().replace(/\s+/g, "");
+    },
+    visibleComments() {
+      if (!this.news || !this.news.commentsData) return [];
+
+      return this.showAllComments
+        ? this.news.commentsData
+        : this.news.commentsData.slice(0, 4);
     },
   },
   methods: {
@@ -253,7 +266,13 @@ export default {
 .text {
   font-size: 15px;
   color: #444;
-  line-height: 1;
+  line-height: 1.2;
+  width: 60%;
+}
+.load-more {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
 }
 
 /*Leave a comment section*/
