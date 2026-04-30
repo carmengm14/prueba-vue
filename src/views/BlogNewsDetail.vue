@@ -39,7 +39,7 @@
                 d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"
               ></path>
             </svg>
-            <span class="commentsNumber">{{ news.comments }} Comments</span>
+            <span class="commentsNumber">{{ news.commentsData.length }} Comments</span>
           </div>
         </div>
         <h1 class="blogTitle" v-if="news">{{ news.newsTitle }}</h1>

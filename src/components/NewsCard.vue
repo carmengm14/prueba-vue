@@ -38,7 +38,7 @@
               d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"
             ></path>
           </svg>
-          <span class="commentsNumber">{{ news.comments }}</span>
+          <span class="commentsNumber">{{ news.commentsData.length }}</span>
         </div>
       </div>
       <p class="descriptionNews">{{ shortDescription }}</p>
@@ -163,5 +163,4 @@ export default {
 .btn-more:hover svg {
   transform: translateX(6px);
 }
-
 </style>
