@@ -43,7 +43,7 @@
       </div>
       <p class="descriptionNews">{{ shortDescription }}</p>
       <button class="btn-more" @click="goToNews">
-        <span>Saber más</span>
+        <span>Read more</span>
         <svg
           width="18"
           height="18"
