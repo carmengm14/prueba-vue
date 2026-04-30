@@ -2,8 +2,8 @@
   <div>
     <HeaderComponent
       title="About us"
-      subtitle="My first Vue App"
-      :bgImage="require('@/assets/foto-contacto.jpg')"
+      subtitle="Meet us and stay up to date :P"
+      :bgImage="require('@/assets/foto-contacto2.jpg')"
     />
     <div class="container">
       <h1>NEWS</h1>
@@ -36,13 +36,10 @@ export default {
 <style scoped>
 .container {
   margin-top: 5vh;
-  width: 50%;
-  justify-content: center;
 }
 .newsContainer {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  align-content: flex-start;
 }
 </style>
