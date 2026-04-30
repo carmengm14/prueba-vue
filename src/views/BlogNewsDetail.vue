@@ -76,6 +76,31 @@
             <p class="text">{{ comment.comment }}</p>
           </div>
         </div>
+        <div class="leaveYourCommentSection">
+          <div class="add-comment" v-if="news">
+            <h2>Leave your comment here :P</h2>
+            <div class="rating">
+              <span
+                v-for="n in 5"
+                :key="n"
+                @click="newComment.score = n"
+                :class="{ active: n <= newComment.score }"
+              >
+                ★
+              </span>
+            </div>
+
+            <input v-model="newComment.user" type="text" placeholder="Your name" />
+
+            <input v-model="newComment.email" type="email" placeholder="Your email" />
+
+            <textarea
+              v-model="newComment.text"
+              placeholder="Write your comment..."
+            ></textarea>
+            <button @click="submitComment">Send comment</button>
+          </div>
+        </div>
       </div>
       <ComeBackBtn />
     </div>
@@ -92,6 +117,12 @@ export default {
   data() {
     return {
       news: null,
+      newComment: {
+        user: "",
+        email: "",
+        text: "",
+        score: 0,
+      },
     };
   },
 
@@ -113,6 +144,30 @@ export default {
     categoryClass() {
       if (!this.news) return "";
       return (this.news.category || "").toLowerCase().trim().replace(/\s+/g, "");
+    },
+  },
+  methods: {
+    submitComment() {
+      if (!this.newComment.user || !this.newComment.text) return;
+
+      const comment = {
+        id: Date.now(),
+        User: this.newComment.user,
+        UserMail: this.newComment.email,
+        score: this.newComment.score,
+        comment: this.newComment.text,
+        commentDate: new Date().toISOString().split("T")[0],
+      };
+
+      this.news.commentsData.push(comment);
+
+      // reset form
+      this.newComment = {
+        user: "",
+        email: "",
+        text: "",
+        score: 0,
+      };
     },
   },
 };
@@ -199,5 +254,52 @@ export default {
   font-size: 15px;
   color: #444;
   line-height: 1;
+}
+
+/*Leave a comment section*/
+.add-comment {
+  width: 100%;
+  max-width: 750px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-comment input,
+.add-comment textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.add-comment textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.add-comment button {
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.rating {
+  display: flex;
+  gap: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.rating span {
+  color: #ccc;
+}
+
+.rating span.active {
+  color: #f5a623;
 }
 </style>
